@@ -10,6 +10,13 @@ import paymentRouter from "./routes/payment.route.js"
 
 const app = express() 
 
+app.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "AI Interview Backend is running!"
+    });
+});
+
 app.use(express.json())
 app.use(cors({
     origin: 'http://localhost:5173',
