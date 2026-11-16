@@ -11,7 +11,9 @@ import InterviewHistory from "./pages/InterviewHistory";
 import Pricing from "./pages/Pricing";
 import InterviewReport from "./pages/InterviewReport";
 
-export const serverUrl = "http://localhost:3000";
+// export const serverUrl = "http://localhost:3000";
+export const serverUrl =
+    import.meta.env.VITE_SERVER_URL || "http://localhost:3000";
 
 const App = () => {
   const dispatch = useDispatch();
