@@ -18,10 +18,16 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.json())
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://ai-interview-project-1-hhhd.onrender.com"
+];
+
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: allowedOrigins,
     credentials: true
-}))
+}));
+
 app.use(cookieparser()) 
 
 //API's
