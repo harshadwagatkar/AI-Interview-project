@@ -101,7 +101,7 @@ const Navbar = () => {
                         <p className="text-sm text-gray-600 mb-4">
                             Welcome, <span className="font-semibold text-blue-400">{userData?.username || "User"}</span>!
                         </p>
-                        <button className="w-full bg-black text-white py-2 rounded-lg text-sm mb-2">
+                        <button className="w-full bg-black text-white py-2 rounded-lg text-sm mb-2" onClick={() => navigate('/history')}>
                             Interview History
                         </button>
                         <button 
